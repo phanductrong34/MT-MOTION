@@ -1,0 +1,17 @@
+-ạo repo mới trên web
+
+- mở terminal: gõ git init
+               tạo file git trong folder
+
+- git status : để biết ở branch master và những file nào đợi được add
+- git add index.html    :      để thêm vào hàng đợi --> chỗ này gõ hết folder để nó thêm vào
+  git add .             :      để add hết
+
+-git commit -m "First commit"   : dán mác đóng gói toàn bộ hàng đợi để chuyển bị push
+
+- git log:                      để xem mình đã ở đúng tk gmail chưa
+
+-lên repo copy hai dòng cuối hướng dẫn đầu 
+    git remote add origin https://github.com/phanductrong34/MT-MOTION.git
+
+    git push -u origin master
