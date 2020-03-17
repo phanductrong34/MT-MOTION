@@ -1,0 +1,13 @@
+- thiết lập npm, tạo đủ folder, file scss, chạy cmd
+- link logo, font chữ, style.css
+- viết html
+
+- viêt variable màu
+- viết base.scss reset lại toàn bộ
+-tạo grid system
+
+
+
+có hai cách để chèn ảnh vào trang:
+- nếu muốn ảnh nằm trong 1 khối có kích thước tùy chỉnh thì tạo 1 div (chứa &nbsp;) và ảnh là backgroudn image của nó --> có  thể overflow hidden đc
+- nếu muốn giữ tỉ lệ đúng của ảnh --> tạo 1 div và chứa thẻ img ở trong
