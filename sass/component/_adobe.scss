@@ -1,0 +1,74 @@
+.adobe{
+
+    @include respond(tab-port){
+        margin-bottom: 4rem;
+    }
+    &-video{
+        width: 100%;
+        height: 30rem;
+        background-image: url(../img/adobe-video.png);
+        background-size: cover;
+        border-radius: 1rem;
+        border: 1rem solid $color-white;
+        @include element-shadow;
+
+        @include respond(tab-port){
+            height: 40rem;
+        }
+    }
+    &-bar{
+        @include clearfix;
+        @include element-shadow-small;
+        backface-visibility: none;
+        width: 100%;
+        background-color: $color-white;
+        border-radius: 8px;
+        padding: 2rem;
+        &:not(:last-child){
+            margin-bottom: 4rem;
+        }
+
+        &__logo{
+            width: 6rem;
+            height: 6rem;
+            display: inline-block;
+            float: left;
+            background-size: 100%;
+            background-position: center;
+            margin-right: 2rem;
+
+            &-1{
+                background-image: url(../img/adobe-logo-1.png);
+            }
+            &-2{
+                background-image: url(../img/adobe-logo-2.png);
+            }
+            &-3{
+                background-image: url(../img/adobe-logo-3.png);
+            }
+            &-4{
+                background-image: url(../img/adobe-logo-4.png);
+            }
+        }
+        &__text{
+            float: left;
+            display: inline-block;
+        }
+        a{
+            float: right;
+        }
+        &__name{
+            font-size: 2rem;
+            letter-spacing: 0.8px;
+            color: $color-tertiary-blue;
+        }
+        &__description{
+            font-size: 1.5rem;
+            color: darken($color-primary-blue,20%);
+        }
+    }
+
+}
+
+
+

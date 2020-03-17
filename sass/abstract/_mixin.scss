@@ -1,0 +1,59 @@
+@mixin clearfix {
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin center-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+@mixin big-shadow {
+    box-shadow: 0 2rem 2rem rgba($color-black,0.3);
+}
+@mixin small-shadow {
+    box-shadow: 0 1rem 1rem rgba($color-black,0.1);
+}
+@mixin small-shadow-hover{
+    box-shadow: 0 1.5rem 1.5rem rgba($color-black,0.1);
+}
+@mixin small-shadow-active{
+    box-shadow: 0 1rem 1rem rgba($color-black,0.15);
+}
+
+
+@mixin element-shadow{
+    box-shadow: 0 0 2rem rgba($color-black,0.15);
+}
+@mixin element-shadow-small{
+    box-shadow: 0.2rem 0.2rem 1.5rem rgba($color-black,0.08);
+}
+
+
+
+
+/// responsive
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone{
+        @media (max-width: 37.5em) {@content};  //600px /16px
+    }
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) {@content};  // 900px /16px
+    }
+    @if $breakpoint == tab-land {
+        @media (max-width: 93.75em) {@content};      //1500px
+    }
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) {@content};   //1800px
+    }
+    
+    
+}
+

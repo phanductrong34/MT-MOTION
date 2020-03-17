@@ -1,0 +1,216 @@
+.card{
+    background-color: $color-white;
+    border-radius: 10px;
+    overflow: hidden;
+    @include element-shadow-small;
+    transition: all 0.2s ease;
+    z-index: 10;
+    position: relative;
+    width: 23rem;
+    @include clearfix;
+
+    @include respond(big-desktop){
+           transform: scale(0.9) translateY(-5vw); //dịch card
+    }
+    @include respond(tab-land){
+        transform: scale(0.9) translateY(-5vw); //dịch card
+ }
+    @include respond(tab-port){
+        width: 50rem;
+        transform: scale(0.7)translateY(-4vw);
+    }
+
+    &__big{
+        position: absolute;
+        top: 70%;
+        left: 54%;
+
+        transform: scale(1.8) translate(-50%,-50%);
+        transform-origin: center;
+
+        @include respond(big-desktop){
+            transform: scale(1.6) translate(-50%,-60%);
+        }
+        @include respond(tab-port){
+            transform: scale(1.4) translate(-42%,-31%);
+        }
+
+    }
+    &__heading{
+        font-weight: lighter;
+        position: absolute;
+        right: 0.5rem;
+        top: 7rem;
+        display:flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        flex-direction: column;
+        transition: all 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+        backface-visibility: none;
+        pointer-events: none;
+        @include respond(tab-port){
+            right: 30.5rem;
+            justify-content: center;
+            align-items: center;
+            transform: scale(1.2);
+        }
+        
+        &>*{
+            background-color: rgba($color-white,0.8);
+            border-radius: 3px;
+            letter-spacing: 0.4px;
+        }
+    }
+    &__lesson{
+        &-number{
+            padding: 0rem 1rem;
+            font-size: 1.5rem;
+            color: lighten($color-secondary-blue,10%);
+
+        }
+        &-title{
+            margin-top: -0.5rem;
+            padding: 0.2rem 1rem;
+            font-size: 1.2rem;
+            color: lighten($color-tertiary-blue,10%);
+
+        }
+    }
+    &__img{
+        height: 12rem;
+        width: 23rem;
+        background-position: center;
+        background-size: 110%;
+        transition: all 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+        cursor: pointer;
+
+        @include respond(tab-port){
+            height: 19rem;
+            width: 24rem;
+            background-size: 145%;
+            display: inline-block;
+            float: left;
+        }
+        
+        &-link{
+            &:hover ~ .card__heading{
+                transform: translateX(18rem);
+                @include respond(tab-port){
+                    transform: none;
+                }
+            }
+            &:hover ~ .card__link{
+                opacity: 1;
+                top: 4.5rem;
+                @include respond(tab-port){
+                    left: 20%;
+                    transform: translateX(-20%);
+                    opacity: 1;
+                    top: 12.5rem;
+                }
+            }
+        }
+        &:hover{
+            background-size: 100%;
+            filter: blur(0.5px) brightness(90%) saturate(120%);
+            @include respond(tab-port){
+                background-size: 140%;
+            }
+        }
+
+        &-1{
+            background-image: url(../img/lesson-1.png);
+        }
+        &-2{
+            background-image: url(../img/lesson-2.png);
+        }
+        &-3{
+            background-image: url(../img/lesson-3.png);
+        }
+        &-4{
+            background-image: url(../img/lesson-4.png);
+        }
+        &-5{
+            background-image: url(../img/lesson-5.png);
+        }
+        &-6{
+            background-image: url(../img/lesson-6.png);
+        }
+        &-7{
+            background-image: url(../img/lesson-7.png);
+        }
+        &-8{
+            background-image: url(../img/lesson-8.png);
+        }
+        &-9{
+            background-image: url(../img/lesson-9.png);
+        }
+        &-10{
+            background-image: url(../img/lesson-10.png);
+        }
+
+
+    }
+    &__link{
+        position: absolute;
+        z-index: 10;
+        top: 12rem;
+        left: 50%;
+        font-size: 1.5rem !important;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: all 0.3s cubic-bezier(0.86, 0, 0.07, 1);
+        pointer-events: none;
+        @include respond(tab-port){
+            left: 20%;
+            transform: translateX(-20%);
+            opacity: 1;
+            top: 12.5rem;
+            
+        }
+        
+    }
+    &__description{
+        padding: 1rem 4rem;
+        width: 22rem;
+        margin-bottom: 4rem;
+        & ul{
+            list-style: none;
+            text-align: center;
+        }
+        &-item{
+            color: $color-secondary-blue;
+            font-size: 1rem;
+            &:not(:last-child){
+                margin-bottom: 0.5rem;
+                border-bottom: 1px solid rgba($color-tertiary-blue,0.2);
+            }
+            @include respond(tab-port){
+                font-size: 1.2rem;
+            }
+        }
+        @include respond(tab-port){
+            float: left;
+            width: 25rem;
+            margin-bottom: 0;
+            transform: translateY(0rem);
+
+
+        }
+
+    }
+    &__row{
+        @include respond(tab-port){
+            margin-top: 17rem !important;
+            &>*{
+                margin-bottom: 5rem !important;
+            }
+        }
+
+    }    
+
+    &__card{
+            //see in button.scss
+    }
+    
+}

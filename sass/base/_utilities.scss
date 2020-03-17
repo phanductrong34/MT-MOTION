@@ -1,0 +1,44 @@
+.u-center-text{
+    text-align: center;
+}
+.u-margin-bottom-small{
+    margin-bottom: 2rem !important;
+}
+.u-margin-bottom-medium{
+    margin-bottom: 4rem !important;
+}
+.u-margin-bottom-big{
+    margin-bottom: 6rem !important;
+}
+
+
+.u-margin-top-small{
+    margin-top: -2rem !important;
+}
+.u-float{
+    float: left;
+}
+.u-flip{
+    transform: scaleX(-1);
+}
+.u-center-grid{
+    z-index: 101;
+    @include center-absolute;
+    width: 100%;
+    top: 62%;
+    &>*{
+        display: flex;
+        justify-content: center;
+        transform: scale(1.45);
+    }
+}
+
+.u-center-col{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.u-transparent{
+    visibility: hidden;
+}

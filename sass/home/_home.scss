@@ -1,0 +1,223 @@
+.main{
+    width: 100%;
+    height: 100rem;
+    position: relative;
+
+}
+.section__gradient{
+    position: relative;
+    width: 100%;
+    background-image: linear-gradient(to right bottom, 
+                                      $color-primary-blue 0%
+                                      ,$color-primary-pink 70%);
+    padding: 30rem 0;
+    clip-path: polygon(10% 0, 90% 0, 90% 100%, 10% 100% );
+    @include respond(tab-port){
+        clip-path: polygon(6% 0, 94% 0, 94% 100%, 6% 100% );
+        padding-bottom: 50rem;
+    }
+
+
+
+}
+.section__source-adobe{
+    @include respond(big-desktop){
+        top: 4rem;
+    }
+    @include respond(tab-port){
+        padding-bottom: 40rem;
+    }
+
+
+}
+.section__white{
+    // position: absolute;
+    position: relative;
+    width: 100%;
+    height: 100rem;
+    z-index: 5;
+
+            &-0{
+                margin-top: -30rem;
+            }
+            &-1{
+                margin-top: -33rem;
+                &:hover .character__container-bunny{
+                    top: 5rem;
+                    left: 23rem;
+                }
+            }
+            &-2{
+                margin-top: -39rem;
+            }
+            &-3{
+                margin-top: -39rem;
+            }
+            &-4{
+                margin-top: -39rem;
+            }  
+        
+    @include respond(big-desktop){
+
+        &-0{
+            margin-top: -30rem;
+        }
+        &-1{
+            margin-top: -33rem;
+            &:hover .character__container-bunny{
+                top: 5rem;
+                left: 23rem;
+            }
+        }
+        &-2{
+            margin-top: -39rem;
+        }
+        &-3{
+            margin-top: -39rem;
+        }
+        &-4{
+            margin-top: -39rem;
+        }  
+    }
+
+    @include respond(tab-land){
+        &-0{
+            margin-top: -33rem;
+        }
+    }
+    @include respond(tab-port){
+
+        &-0{
+            margin-top: -47rem;
+        }
+        &-1{
+            margin-top: -49rem;
+            &:hover .character__container-bunny{
+                top: 5rem;
+                left: 23rem;
+            }
+        }
+        &-2{
+            margin-top: -56rem;
+        }
+        &-3{
+            margin-top: -56rem;
+        }
+        &-4{
+            margin-top: -39rem;
+        }  
+    }
+
+
+    
+    &>*{
+        position: absolute;
+    }
+    &__background{
+        width: 100%;
+        height: 100rem;
+        position: absolute;
+        background-image: url(../img/section-bg-1.png);
+        background-size: 90% auto;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @include respond(tab-port){
+            width: 100%;
+            background-size: 150% auto;
+            height: 150rem;
+            background-position: left;
+        }
+
+        &-last{
+            height: 60rem;
+            background-position: top;
+
+        }
+    }
+}
+.section__final{
+    z-index: 1;
+    &{
+        &-0{
+            margin-top: -36rem;
+        }
+        &-1{
+            margin-top: -36rem;
+        }
+        &-2{
+            margin-top: -36rem;
+        }
+        &-3{
+            margin-top: -36rem;
+        }
+    }  
+    @include respond(big-desktop){
+        &-0{
+            margin-top: -36rem;
+        }
+        &-1{
+            margin-top: -36rem;
+        }
+        &-2{
+            margin-top: -36rem;
+        }
+        &-3{
+            margin-top: -36rem;
+        }
+    }
+    @include respond(tab-port){
+        &-0{
+            margin-top: -15rem;
+        }
+        &-1{
+            margin-top: -6rem;
+        }
+        &-2{
+            margin-top: -6rem;
+        }
+        &-3{
+            margin-top: -6rem;
+        }
+    }
+}
+
+.section__resourse{
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+    height: 106rem;
+    background-image: url(../img/section-resource-1.png);
+    background-position: center;
+    background-size:83% auto; 
+    background-repeat: no-repeat;
+
+    margin-top: -57rem;
+    @include respond(tab-port){
+        background-size:100% auto;   
+    }
+
+    &__container{
+        width: 100%;
+        height: 72rem;
+        background-image: url(../img/section-resource-2.png);
+        background-position: center;
+        background-size:101% auto; 
+        background-repeat: no-repeat;
+        margin-top: 10rem;
+        @include clearfix;
+
+        @include respond(tab-port){
+            background-image: none; 
+        }
+        
+    }
+
+    // @include respond(big-desktop){
+    //     top: 495rem;
+    // }
+    // @include respond(tab-port){
+    //     top: 636rem;
+    // }
+
+}

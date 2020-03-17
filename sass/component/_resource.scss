@@ -1,0 +1,162 @@
+.folder{
+    &__container{
+        float: right;
+        width: 54%;
+        height: 53rem;
+        margin-top: 12rem;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        cursor: pointer;
+
+        @include respond(tab-port){
+            float: none;
+            width: 100%;
+            height: 50rem;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            margin-top: -2rem;
+
+        }
+
+    }
+    &__item{
+        position: relative;
+        width: 100%;
+        height: 13rem;
+        background-image: url(../img/icon-folder.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80%;
+        transition: transform 0.1s ease;
+        &:hover{
+            transform: scale(1.1);
+        }
+        &:not(:last-child){
+            margin-bottom: 1rem;
+        }
+
+        @include respond(tab-port){
+            display: inline-block;
+            width: 20rem;
+            height: 20rem;
+            
+        }
+    }
+
+    &__title{
+        position: absolute;
+        bottom: 2.3rem;
+        right: 3rem;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        color: $color-gray-2;
+        transform: rotate(-6deg);
+        font-family: 'Panton';
+        pointer-events: none;
+        
+        @include respond(tab-port){
+            bottom: 5.3rem;
+            right: 3rem;
+        }
+    }
+
+
+}
+
+.file{
+    &__container{
+        float: left;
+        width: 91%;
+        height: 53rem;
+        margin-top: 12rem;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+    }
+    &__item{
+        position: relative;
+        display: inline-block;
+        width: calc((100% - (6rem * 3))/4);
+        margin-bottom: 3rem;
+        cursor: pointer;
+        text-decoration:none;
+        &:not(:last-child){
+            margin-right: 1rem;
+        }
+        animation: fadeIn 0.5s ease both;
+    }
+    // &__logo{
+    //     position: absolute;
+    //     @include center-absolute;
+    //     width: 6rem;
+    //     height: 6rem;
+    //     background-image: url(../img/pinterest.png);
+    //     background-position: center;
+    //     background-size: 100%;
+    //     background-repeat: no-repeat;
+        
+    // }
+    &__bg{
+        width: 100%;
+        height: 12rem;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 95%;
+        transition: transform 0.1s ease;
+        &:hover{
+            transform: scale(1.1);
+        }
+        &-file{
+            background-image: url(../img/icon-file.png);
+        }
+        &-web{
+            background-image: url(../img/icon-web.png);
+            & ~ .file-logo{
+                
+            }
+        }
+        &-yt{
+            background-image: url(../img/icon-yt.png);
+        }
+
+    }
+    &__title{
+        &,
+        &:link,
+        &:visited{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12rem;
+            text-align: center;
+            font-size: 1.5rem;
+            color: $color-gray-2;
+            text-decoration:none;   
+        }
+
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px $color-gray-1; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:  linear-gradient(to bottom, rgba($color-primary-blue,0.8), rgba($color-primary-pink,0.8)); 
+    border-radius: 10px;
+    transition: all 0.2s ease;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, rgba($color-primary-blue,1), rgba($color-primary-pink,1)); 
+  }

@@ -1,0 +1,114 @@
+.character__container{
+    position: absolute;
+    z-index: 100;
+    transform: scale(0.9);
+    
+    &-boy{
+        top: -20rem;
+        left: -44rem;
+        &>*{
+            width: 60vw;
+            height: auto;
+            transform-origin: 50% -50%;
+        }
+
+
+        @include respond(tab-port){
+
+        }
+    } 
+    &-BMO{
+
+        top: 77rem;
+        right: 20rem;
+        &>*{
+            width: 32vw;
+            height: auto;
+            transform-origin: 50% -50%;
+        }
+
+        @include respond(big-desktop){
+            
+        }
+    }
+    &-bunny{
+        top: 30rem;
+        left: 23rem;
+        z-index: 0;
+        transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        &>*{
+            width: 40vw;
+            height: auto;
+            transform-origin: 50% -50%;
+        }
+        
+        @include respond(big-desktop){
+            top: 29rem;
+            left: 23rem;
+        }
+    }
+    &-duck{
+        top: -11.5rem;
+        left: 7rem;
+        transform: scale(1.1);
+
+        &>*{
+            width: 20vw;
+            height: auto;
+            transform-origin: 50% -50%;
+        }
+        @include respond(big-desktop){
+            top: -4.5rem;
+            left: 6rem;
+
+        }
+
+    }
+    &-couple{
+        z-index: 0;
+        top: -21.5rem;
+        left: 7rem;
+
+
+        &>*{
+            width: 25vw;
+            height: auto;
+            transform-origin: 0% 50%;
+        }
+        @include respond(big-desktop){
+            top: -13.5rem;
+            left: 6rem;
+        }
+    }
+    &-ship{
+        z-index: 1001;
+        right: -20rem;
+        top: 20rem;
+        &>*{
+            width: 39vw;
+            height: auto;
+            transform-origin: 0% 50%;
+        }
+        @include respond(big-desktop){
+            right: -19rem;
+            top: 28rem;
+        }
+    }
+    &-boss{
+        z-index: 0;
+        top: -0.5rem;
+        right: 25rem;
+
+        @include respond(big-desktop){
+            top: 0.5rem;
+            right: 19rem;
+        }
+    }
+
+    @include respond(tab-port){
+        &>*{
+            display: none;
+        }
+    }
+
+}

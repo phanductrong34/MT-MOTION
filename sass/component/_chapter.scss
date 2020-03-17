@@ -1,0 +1,128 @@
+
+.chapter{
+    overflow: hidden;
+    width: 33rem;
+    height: 22rem;
+    background-color: $color-white;
+    margin: 60rem auto;
+    margin-bottom: 0;
+    border-radius: 1rem;
+    @include element-shadow;
+    background-size: 110%;
+    background-position: center;
+    background-blend-mode: hard-light;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+    z-index: 4;
+    @include respond(big-desktop){
+        transform: scale(0.9) translateX(-13%) translateY(4rem);
+    }
+    @include respond(tab-land){
+        transform: scale(0.95) translateX(-6%);
+    }
+
+    @include respond(tab-port){
+        width: 39rem;
+        height: 7rem;
+        margin: 1rem auto;
+
+           
+    }
+
+
+    &:hover{
+        cursor: pointer;
+        background-size: 100%;
+        filter: brightness(110%);
+    }
+    &:hover a{
+        transform: translate(-50%,50%);
+        opacity: 100%;
+    }
+
+    h2{
+        @include center-absolute;
+    }
+    &-1{
+        background-image: 
+            linear-gradient(to right bottom, 
+                            rgba($color-primary-blue,0.85),
+                            rgba($color-primary-pink,0.85)),
+            url(../img/chapter-1.png);
+
+    }
+    &-2{
+        background-image: 
+            linear-gradient(to right bottom, 
+                            rgba($color-primary-blue,0.85),
+                            rgba($color-primary-pink,0.85)),
+            url(../img/chapter-1.png);
+
+    }
+    &-3{
+        background-image: 
+            linear-gradient(to right bottom, 
+                            rgba($color-primary-blue,0.85),
+                            rgba($color-primary-pink,0.85)),
+            url(../img/chapter-1.png);
+
+    }
+
+    &__no{
+        font-family: 'Panton';
+        position: absolute;
+        font-size: 11rem;
+        text-transform: uppercase;
+        background-image: linear-gradient(to right, $color-primary-blue,$color-primary-pink,$color-primary-blue,$color-primary-pink);
+        color: transparent;
+        -webkit-background-clip: text;
+        z-index: 10001;
+        background-size: 400% 400%;
+        transition: background-position 2s ease-in-out;
+
+
+        &:hover{
+            background-position: 100% 0;
+        }
+        &-normal{
+            transform: rotateZ(90deg);
+            top: 50%;
+            right: -16rem;
+        }
+        &-flip{
+            transform: rotateZ(-90deg);
+            top: 50%;
+            left: -16rem;
+        }
+
+        @include respond(big-desktop){
+            font-size: 8rem;
+            &-normal{
+                top: 50%;
+                right: -11rem;
+            }
+            &-flip{
+                top: 50%;
+                left: -11rem;
+            }
+        }
+        @include respond(tab-land){
+            font-size: 6.5vw;
+        }
+        @include respond(tab-port){
+            font-size: 2rem;
+            &-normal{
+                top: 70%;
+                right: 85%;
+                transform: rotateZ(-90deg) scale(4);
+            }
+            &-flip{
+                top: 70%;
+                left: 85%;
+                transform: rotateZ(90deg) scale(4);
+            }
+        }
+        
+        
+    }
+}

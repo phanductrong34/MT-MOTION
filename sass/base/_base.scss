@@ -1,0 +1,48 @@
+html{
+    font-size: 62.5%;
+    font-family: 'Baloo Bhai', cursive;
+
+    @include respond(tab-land){
+        font-size: 56.25%;
+    }
+    @include respond(tab-port){
+        font-size: 50%;
+    }
+    @include respond(big-desktop){
+        font-size: 75%;
+    }
+}
+
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    clip-path: polygon(3% 5.4rem, 97% 5.4rem, 97% 100%, 3% 100%);
+    height: 720rem;
+
+    @include respond(tab-port){
+        clip-path: polygon(0% 0rem, 100% 0rem, 100% 100%, 0% 100%);
+        height: 980em;
+    }
+}
+
+.img{
+    width: 100%;
+    height: auto;
+}
+
+a,h1,h2,h3{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+

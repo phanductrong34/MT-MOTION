@@ -3,7 +3,7 @@
 - mở terminal: gõ git init
                tạo file git trong folder
 
-- git status : để biết ở branch master và những file nào đợi được add
+- git status : để biết ở branch master và những file nào chưa đc add
 - git add index.html    :      để thêm vào hàng đợi --> chỗ này gõ hết folder để nó thêm vào
   git add .             :      để add hết
 
@@ -12,6 +12,9 @@
 - git log:                      để xem mình đã ở đúng tk gmail chưa
 
 -lên repo copy hai dòng cuối hướng dẫn đầu 
-    git remote add origin https://github.com/phanductrong34/MT-MOTION.git
+    git remote add origin https://github.com/phanductrong34/MT-MOTION.git       xác định địa chỉ để đẩy chúng nó lên
 
-    git push -u origin master
+    git push -u origin master                                                   đẩy chúng nó lên
+
+- nếu có thím khác commit lên master rồi, thì mình phải pull về trước, nếu ko sẽ bị conflict
+    git pull

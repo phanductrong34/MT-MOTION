@@ -1,0 +1,49 @@
+@font-face{
+    font-family: 'Panton';
+    src: url("../font/SVN-Panton Black.ttf");
+}
+
+.heading-primary{
+    font-family: 'Panton';
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: $color-secondary-blue;
+    transform: translateY(-5rem);
+        @include respond(tab-port){
+            font-size: 3.5rem;
+            transform: translateY(-2.3rem);
+        }
+
+}
+.heading-secondary{
+    font-family: 'Panton';
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: $color-secondary-blue;
+
+
+
+}
+
+.heading-tertiary{
+    & span{
+        // position: absolute;
+        // top: 14rem;
+        // left: 50%;
+        // transform: translateX(-50%);
+        display: inline-block;
+        font-family: 'Panton' ;
+        font-size: 8rem;
+        text-transform:uppercase;
+        color: white;
+        padding: 0.2rem 9rem;
+        background-image: linear-gradient(to right, $color-primary-blue, $color-primary-pink);
+
+        @include respond(big-desktop){
+            font-size: 6rem;
+            top: 22rem;
+        }
+    }
+   
+}
+
